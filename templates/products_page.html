@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Products - Cropify</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="/static/css/style.css" />
+    </head>
+
+    <body>
+        <section class="page-1" id="page1">
+            <!-- Navigation Bar -->
+            <div class="navbar">
+                <div class="company-logo">
+                    <a href="#" class="company-logo">
+                        <img src="/static/img/pngwing.com.png" alt="logo" />
+                        <p>Cropify</p>
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <ul id="menu">
+                        <li id="home"><a href="/">Home</a></li>
+                        <li id="products"><a href="/products">Products</a></li>
+                        <li id="contact"><a href="contact_page.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="getstarted">
+                    <a href="#" class="button alink">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Prediction Area-->
+            <h1>Predict the suitability of your soil</h1>
+            <div class="pred-container">
+                <form action="#" id="nutrient-form">
+                    <div class="nitrogen">
+                        <label for="n">Nitrogen N (kg/ha)</label>
+                        <input
+                            type="number"
+                            name="N"
+                            id="n"
+                            min="0"
+                            value="0"
+                            step="0.001"
+                            required
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="phosphorus">
+                        <label for="p">Phosphorus P (kg/ha)</label>
+                        <input
+                            type="number"
+                            name="P"
+                            id="p"
+                            min="0"
+                            value="0"
+                            step="0.001"
+                            required
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="potassium">
+                        <label for="k">Potassium K (kg/ha)</label>
+                        <input
+                            type="number"
+                            name="K"
+                            id="k"
+                            min="0"
+                            value="0"
+                            step="0.001"
+                            required
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="ph-level">
+                        <label for="ph">pH Level</label>
+                        <input
+                            type="number"
+                            name="pH"
+                            id="ph"
+                            min="0"
+                            value="0"
+                            step="0.001"
+                            required
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="elec-cond">
+                        <label for="ec">Electrical Conductivity (dS/m)</label>
+                        <input
+                            type="number"
+                            name="EC"
+                            id="ec"
+                            min="0"
+                            value="0"
+                            step="0.001"
+                            required
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="orgnc-c">
+                        <label for="oc">Organic Carbon (%)</label>
+                        <input
+                            type="number"
+                            name="OC"
+                            id="oc"
+                            min="0"
+                            value="0"
+                            step="0.001"
+                            required
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="sulphur">
+                        <label for="s">Sulphur (ppm)</label>
+                        <input
+                            type="number"
+                            name="S"
+                            id="s"
+                            min="0"
+                            value="0"
+                            step="0.001"
+                            required
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="zinc">
+                        <label for="zn">Zinc (ppm)</label>
+                        <input
+                            type="number"
+                            name="Zn"
+                            id="zn"
+                            min="0"
+                            value="0"
+                            step="0.001"
+                            required
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="iron">
+                        <label for="fe">Iron (ppm)</label>
+                        <input
+                            type="number"
+                            name="Fe"
+                            id="fe"
+                            min="0"
+                            value="0"
+                            step="0.001"
+                            required
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="copper">
+                        <label for="cu">Copper (ppm)</label>
+                        <input
+                            type="number"
+                            name="Cu"
+                            id="cu"
+                            min="0"
+                            value="0"
+                            step="0.001"
+                            required
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="manganese">
+                        <label for="mn">Manganese (ppm)</label>
+                        <input
+                            type="number"
+                            name="Mn"
+                            id="mn"
+                            min="0"
+                            value="0"
+                            step="0.001"
+                            required
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="boron">
+                        <label for="b">Boron (ppm)</label>
+                        <input
+                            type="number"
+                            name="B"
+                            id="b"
+                            min="0"
+                            value="0"
+                            step="0.001"
+                            required
+                            autocomplete="off"
+                        />
+                    </div>
+                    <button type="submit" class="button">Get the Analysis</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="page-2 d-none" id="page2">
+            <div class="gauge">
+                <div class="gauge__body">
+                    <div class="gauge__fill"></div>
+                    <div class="gauge__cover">50%</div>
+                </div>
+            </div>
+
+            <p class="status" id="status">Very Good</p>
+
+            <div class="nutrients">
+                <div class="nutrient" id="nut-N">
+                    <div class="grp">
+                        <div class="name">Nitrogen</div>
+                        <div class="dev">
+                            <div class="up"><i class="fa-solid fa-play"></i><span> 14%</span></div>
+                        </div>
+                    </div>
+                    <div class="soln soln-d">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-n d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-u d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="verdict medium">Status: <span>Medium</span></div>
+                </div>
+                <div class="nutrient" id="nut-P">
+                    <div class="grp">
+                        <div class="name">Phosphorus</div>
+                        <div class="dev">
+                            <div class="down"><i class="fa-solid fa-play"></i><span> 76%</span></div>
+                        </div>
+                    </div>
+                    <div class="soln soln-d">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-n d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-u d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="verdict verylow">Status: <span>Very Low</span></div>
+                </div>
+                <div class="nutrient" id="nut-K">
+                    <div class="grp">
+                        <div class="name">Potassium</div>
+                        <div class="dev">
+                            <div class="down"><i class="fa-solid fa-play"></i><span> 17%</span></div>
+                        </div>
+                    </div>
+                    <div class="soln soln-d">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-n d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-u d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="verdict medium">Status: <span>Medium</span></div>
+                </div>
+                <div class="nutrient" id="nut-pH">
+                    <div class="grp">
+                        <div class="name">pH</div>
+                        <div class="dev">
+                            <div class="up"><i class="fa-solid fa-play"></i><span> 4%</span></div>
+                        </div>
+                    </div>
+                    <div class="soln soln-d">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-n d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-u d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="verdict slightlyalk">Status: <span>Slightly Alkaline</span></div>
+                </div>
+                <div class="nutrient" id="nut-EC">
+                    <div class="grp">
+                        <div class="name">Electrical Conductivity</div>
+                        <div class="dev">
+                            <div class="up"><i class="fa-solid fa-play"></i><span> 0%</span></div>
+                        </div>
+                    </div>
+                    <div class="soln soln-d">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-n d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-u d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="verdict normal">Status: <span>Normal</span></div>
+                </div>
+                <div class="nutrient" id="nut-OC">
+                    <div class="grp">
+                        <div class="name">Organic Carbon</div>
+                        <div class="dev">
+                            <div class="up"><i class="fa-solid fa-play"></i><span> 43%</span></div>
+                        </div>
+                    </div>
+                    <div class="soln soln-d">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-n d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-u d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="verdict high">Status: <span>High</span></div>
+                </div>
+                <div class="nutrient" id="nut-S">
+                    <div class="grp">
+                        <div class="name">Sulphur</div>
+                        <div class="dev">
+                            <div class="up"><i class="fa-solid fa-play"></i><span> 0%</span></div>
+                        </div>
+                    </div>
+                    <div class="soln soln-d">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-n d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-u d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="verdict suff">Status: <span>Sufficient</span></div>
+                </div>
+                <div class="nutrient" id="nut-Zn">
+                    <div class="grp">
+                        <div class="name">Zinc</div>
+                        <div class="dev">
+                            <div class="up"><i class="fa-solid fa-play"></i><span> 0%</span></div>
+                        </div>
+                    </div>
+                    <div class="soln soln-d">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-n d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-u d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="verdict suff">Status: <span>Sufficient</span></div>
+                </div>
+                <div class="nutrient" id="nut-Fe">
+                    <div class="grp">
+                        <div class="name">Iron</div>
+                        <div class="dev">
+                            <div class="up"><i class="fa-solid fa-play"></i><span> 0%</span></div>
+                        </div>
+                    </div>
+                    <div class="soln soln-d">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-n d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-u d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="verdict suff">Status: <span>Sufficient</span></div>
+                </div>
+                <div class="nutrient" id="nut-Cu">
+                    <div class="grp">
+                        <div class="name">Copper</div>
+                        <div class="dev">
+                            <div class="up"><i class="fa-solid fa-play"></i><span> 0%</span></div>
+                        </div>
+                    </div>
+                    <div class="soln soln-d">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-n d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-u d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="verdict suff">Status: <span>Sufficient</span></div>
+                </div>
+                <div class="nutrient" id="nut-Mn">
+                    <div class="grp">
+                        <div class="name">Manganese</div>
+                        <div class="dev">
+                            <div class="up"><i class="fa-solid fa-play"></i><span> 0%</span></div>
+                        </div>
+                    </div>
+                    <div class="soln soln-d">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-n d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-u d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="verdict suff">Status: <span>Sufficient</span></div>
+                </div>
+                <div class="nutrient" id="nut-B">
+                    <div class="grp">
+                        <div class="name">Boron</div>
+                        <div class="dev">
+                            <div class="up"><i class="fa-solid fa-play"></i><span> 0%</span></div>
+                        </div>
+                    </div>
+                    <div class="soln soln-d">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-n d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="soln soln-u d-none">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi dolores
+                        fuga asperiores velit, eveniet a, corporis mollitia voluptatum, delectus
+                        neque. Pariatur itaque harum qui, alias nobis odio iusto vel?
+                    </div>
+                    <div class="verdict suff">Status: <span>Sufficient</span></div>
+                </div>
+            </div>
+        </section>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="/static/js/index.js"></script>
+    </body>
+</html>
