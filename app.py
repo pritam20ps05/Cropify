@@ -25,7 +25,8 @@ def fertilityapi():
         'dev': analy['dev'],
         'verdict': analy['verdict'],
         'score': analy['devscore'],
-        'colorarr': analy['colorarr']
+        'colorarr': analy['colorarr'],
+        'crops': analy['crops']
     }
 
 

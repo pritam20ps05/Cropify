@@ -480,6 +480,33 @@ form button {
     color: #09bf64;
 }
 
+.page-2 .crops {
+    width: 80%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.page-2 .crops .title {
+    margin: 0 auto;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.page-2 .crops .crop-cont {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.page-2 .crop {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0.5rem;
+}
+
 .page-2 .nutrients {
     display: flex;
     flex-wrap: wrap;

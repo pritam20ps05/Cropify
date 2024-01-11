@@ -65,6 +65,18 @@ $("#nutrient-form").on("submit", (e) => {
     }, 500);
     console.log(msg);
     setGaugeValue((msg['score']*5 + msg['score1'])/6);
+    if (msg['crops'].length===0) {
+      $('.crops').addClass('d-none');
+    }
+    else {
+      $('.crops').removeClass('d-none');
+      let cropdiv = $('.crop-cont');
+      cropdiv.html('');
+      for (let i = 0; i < msg['crops'].length; i++) {
+        const element = msg['crops'][i];
+        cropdiv.append(`<p class="crop">🌱 ${element}<span></span></p>`);
+      }
+    }
     for (let i = 0; i < 12; i++) {
       let idev = msg['dev'][i];
       let iver = msg['verdict'][i];
