@@ -36,6 +36,11 @@ body {
     display: none!important;
 }
 
+.nav-grp {
+    display: flex;
+    gap: 2rem;
+}
+
 .button {
     color: #fff;
     font-size: 18px;
@@ -125,7 +130,8 @@ body {
     gap: 2.5rem;
     list-style-type: none;
     letter-spacing: 0.01rem;
-    font-family: Sans-Medium;
+    /* font-family: Sans-Medium; */
+    font-weight: 500;
 }
 
 .nav-menu #menu .active::before {

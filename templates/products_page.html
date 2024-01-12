@@ -12,6 +12,11 @@
             referrerpolicy="no-referrer"
         />
         <link rel="stylesheet" href="/static/css/style.css" />
+        <style>
+            * {
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
     </head>
 
     <body>
@@ -31,8 +36,11 @@
                         <li id="contact"><a href="contact_page.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="getstarted">
-                    <a href="#" class="button alink">Get Started</a>
+                <div class="nav-grp">
+                    <div id="google_translate_element"></div>
+                    <div class="getstarted">
+                        <a href="#" class="button alink">Get Started</a>
+                    </div>
                 </div>
             </div>
 
@@ -212,9 +220,8 @@
             <p class="status" id="status">Very Good</p>
 
             <div class="crops">
-                <p class="title">You can Plant these crops to maximize your prduction</p>
-                <div class="crop-cont">
-                </div>
+                <p class="title">You can Plant these crops to maximize your production</p>
+                <div class="crop-cont"></div>
                 <!-- <p class="crop">🌱 Wheat (गेहूँ)<span></span></p>
                 <p class="crop">🌱 Maize (मक्का)<span></span></p>
                 <p class="crop">🌱 Lentils (दाल)<span></span></p>
@@ -581,6 +588,19 @@
                 </div>
             </div>
         </section>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    { pageLanguage: "en" },
+                    "google_translate_element"
+                );
+            }
+        </script>
+
+        <script
+            type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        ></script>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
             integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="

@@ -1,30 +1,30 @@
 cropsdata = {
     'rice': {
-        'fullname': 'Rice (चावल)',
+        'fullname': 'Rice',
         'params': [150, 35, 60, 6, 2]
     },
     'wheat': {
-        'fullname': 'Wheat (गेहूँ)',
+        'fullname': 'Wheat',
         'params': [100, 40, 60, 7, 2]
     },
     'maize': {
-        'fullname': 'Maize (मक्का)',
+        'fullname': 'Maize',
         'params': [150, 35, 60, 6, 2]
     },
     'lentils': {
-        'fullname': 'Lentils (दाल)',
+        'fullname': 'Lentils',
         'params': [20, 40, 20, 7, 2]
     },
     'sugarcane': {
-        'fullname': 'Sugarcane (गन्ना)',
+        'fullname': 'Sugarcane',
         'params': [150, 35, 60, 6, 2]
     },
     'potato': {
-        'fullname': 'Potato (आलू)',
+        'fullname': 'Potato',
         'params': [150, 35, 120, 6, 2]
     },
     'pea': {
-        'fullname': 'Pea (मटर)',
+        'fullname': 'Pea',
         'params': [80, 30, 50, 6, 2]
     },
 }

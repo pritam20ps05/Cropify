@@ -12,7 +12,7 @@ class SoilFertilityTester():
     stdinputarr = []
 
     avg = [296, 17, 506, 8, 1, 1, 7, 1, 4, 1, 9, 1]
-    stdavg = [200, 40, 100, 7, 3.4, 0.63, 10, 0.6, 4.5, 0.2, 2.0, 0.5]
+    stdavg = [420, 40, 241, 7, 3.4, 0.63, 10, 0.6, 4.5, 0.2, 2.0, 0.5]
     norm = [0, 0, 0, 0, -1, 0, 1, 1, 1, 1, 1, 1]
     mul = [5500, 5500, 5500, 15000, 5500, 3000, 1000, 1000, 1000, 1000, 1000, 1000]
     classifiers = [lmhClassifier, lmhClassifier, lmhClassifier, 
@@ -20,7 +20,7 @@ class SoilFertilityTester():
                 microClassifier, microClassifier, microClassifier, 
                 microClassifier, microClassifier, microClassifier]
 
-    normal = ['150-300', '23-57', '70-207', '7', '0-5', '0.51-0.75', '>10', '>0.6', '>4.5', '>0.2', '>2.0', '>0.5']
+    normal = ['280-560', '23-57', '145-337', '7', '0-5', '0.51-0.75', '>10', '>0.6', '>4.5', '>0.2', '>2.0', '>0.5']
     params = ['N', 'P', 'K', 'pH', 'EC', 'OC', 'S', 'Zn', 'Fe', 'Cu', 'Mn', 'B']
 
     dev = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # (stdinp - stdavg)/stdavg
