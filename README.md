@@ -9,6 +9,19 @@ for cultivating those crops and integrating a Chatbot for ease of access.
 Sample Data is collected through an IoT device making it cheaper and easier to implement than most other methods. Also it will provide us a real-time feed of data which can be used to analyse the paterns 
 of nature which will make our model more accurate.
 
+## Installation
+To install the backend for this site `Python 3.11.5` is recomended. Now first clone the repository then run the following commands (Virtual Env is prefered).  
+
+### Installing the requirements
+```
+pip install -r requirements.txt
+```
+
+### Running the Server
+```
+python app.py
+```
+
 ## UI of the website
 ![Screenshot 2024-01-10 000626](https://github.com/pritam20ps05/Cropify/assets/49360491/ecdd3852-f0a7-4202-a8a1-f7bf20da0e63)
 

@@ -1,5 +1,8 @@
 import numpy as np
-from keras.models import load_model
+try:
+    from tensorflow.keras.models import load_model
+except ImportError as e:
+    from keras.models import load_model
 
 from .classifiers import *
 from .crops import *
